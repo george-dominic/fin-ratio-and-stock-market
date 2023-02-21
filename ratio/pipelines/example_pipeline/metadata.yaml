@@ -1,0 +1,64 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - fill_in_missing_values
+  - bar_chart_for_load_titanic_1676917316336
+  executor_config: null
+  executor_type: local_python
+  language: python
+  name: load_titanic
+  status: executed
+  type: data_loader
+  upstream_blocks: []
+  uuid: load_titanic
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - export_titanic_clean
+  executor_config: null
+  executor_type: local_python
+  language: python
+  name: fill_in_missing_values
+  status: executed
+  type: transformer
+  upstream_blocks:
+  - load_titanic
+  uuid: fill_in_missing_values
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  language: python
+  name: export_titanic_clean
+  status: not_executed
+  type: data_exporter
+  upstream_blocks:
+  - fill_in_missing_values
+  uuid: export_titanic_clean
+data_integration: null
+name: example_pipeline
+type: python
+uuid: example_pipeline
+widgets:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    chart_style: vertical
+    chart_type: bar chart
+    x: x
+    y: y
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  language: python
+  name: bar chart for load_titanic 1676917316336
+  status: executed
+  type: chart
+  upstream_blocks:
+  - load_titanic
+  uuid: bar_chart_for_load_titanic_1676917316336
