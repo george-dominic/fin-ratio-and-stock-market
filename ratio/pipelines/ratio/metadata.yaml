@@ -1,6 +1,107 @@
-blocks: []
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - histogram_for_get_ratio_1677022102116
+  - bar_chart_for_get_ratio_1677022105884
+  - table_for_get_ratio_1677022112435
+  - pie_chart_for_get_ratio_1677022115300
+  - missing_values_for_get_ratio
+  executor_config: null
+  executor_type: local_python
+  language: python
+  name: get_ratio
+  status: executed
+  type: data_loader
+  upstream_blocks: []
+  uuid: get_ratio
 data_integration: null
 name: ratio
 type: python
 uuid: ratio
-widgets: []
+widgets:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    buckets: 10
+    chart_type: histogram
+    x: x
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  language: python
+  name: histogram for get_ratio 1677022102116
+  status: executed
+  type: chart
+  upstream_blocks:
+  - get_ratio
+  uuid: histogram_for_get_ratio_1677022102116
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    chart_style: vertical
+    chart_type: bar chart
+    x: x
+    y: y
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  language: python
+  name: bar chart for get_ratio 1677022105884
+  status: executed
+  type: chart
+  upstream_blocks:
+  - get_ratio
+  uuid: bar_chart_for_get_ratio_1677022105884
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    chart_type: table
+    limit: 10
+    x: x
+    y: y
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  language: python
+  name: table for get_ratio 1677022112435
+  status: executed
+  type: chart
+  upstream_blocks:
+  - get_ratio
+  uuid: table_for_get_ratio_1677022112435
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    buckets: 7
+    chart_type: pie chart
+    x: x
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  language: python
+  name: pie chart for get_ratio 1677022115300
+  status: executed
+  type: chart
+  upstream_blocks:
+  - get_ratio
+  uuid: pie_chart_for_get_ratio_1677022115300
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    chart_style: horizontal
+    chart_type: bar chart
+    x: columns_with_mising_values
+    y: percentage_of_missing_values
+    y_sort_order: descending
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  language: python
+  name: missing values for get_ratio
+  status: executed
+  type: chart
+  upstream_blocks:
+  - get_ratio
+  uuid: missing_values_for_get_ratio
